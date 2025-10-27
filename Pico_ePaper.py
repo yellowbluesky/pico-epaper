@@ -500,7 +500,7 @@ class EinkPIO(EinkBase):
 
     @micropython.viper
     def _check_dma_busy(self, a: ptr32) -> int:
-        return (a[0] >> 24) & 1
+        return (a[0] >> 26) & 1
 
     def _send_buffer(self, buffer):
         if self._horizontal:
